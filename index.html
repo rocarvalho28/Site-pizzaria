@@ -3,27 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Don Corleone Pizzaria Pacaembu | Pizzaria 24 Horas em São Paulo</title>
-    <meta name="description" content="Don Corleone Pizzaria Pacaembu Matriz, aberta 24 horas em São Paulo. Confira o cardápio, faça seu pedido online ou reserve pelo WhatsApp.">
-    <meta name="theme-color" content="#111111">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Don Corleone Pizzaria Pacaembu | Pizzaria 24 Horas em São Paulo
+    </title>
+
+    <meta
+        name="description"
+        content="Don Corleone Pizzaria Pacaembu Matriz, aberta 24 horas em São Paulo. Confira o cardápio, faça seu pedido online ou reserve pelo WhatsApp."
+    >
+
+    <meta
+        name="theme-color"
+        content="#111111"
+    >
 
     <!-- ======================================================
          TAILWIND CSS
     ======================================================= -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+
     <!-- ======================================================
          GOOGLE FONTS
     ======================================================= -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
 
     <!-- ======================================================
          LUCIDE ICONS
     ======================================================= -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
 
     <!-- ======================================================
          CONFIGURAÇÃO DO TAILWIND
@@ -44,138 +74,2555 @@
                             green: "#25D366"
                         }
                     },
+
                     fontFamily: {
-                        sans: ["DM Sans", "sans-serif"],
-                        display: ["Playfair Display", "serif"]
+                        sans: [
+                            "DM Sans",
+                            "sans-serif"
+                        ],
+
+                        display: [
+                            "Playfair Display",
+                            "serif"
+                        ]
                     },
+
                     boxShadow: {
-                        glow: "0 18px 50px rgba(139,17,24,.32)",
-                        card: "0 18px 55px rgba(0,0,0,.18)",
-                        whatsapp: "0 12px 40px rgba(37,211,102,.42)"
+                        glow:
+                            "0 18px 50px rgba(139,17,24,.32)",
+
+                        card:
+                            "0 18px 55px rgba(0,0,0,.18)",
+
+                        whatsapp:
+                            "0 12px 40px rgba(37,211,102,.42)"
                     }
                 }
             }
         }
     </script>
 
+
     <!-- ======================================================
          CSS EXTRA
     ======================================================= -->
     <style>
-        html { scroll-behavior: smooth; }
-        body { background: #111111; }
-        ::selection { background: #F4B942; color: #111111; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111111;
+        }
+
+        ::selection {
+            background: #F4B942;
+            color: #111111;
+        }
+
         .hero-overlay {
-            background: linear-gradient(90deg, rgba(7,7,7,.98) 0%, rgba(7,7,7,.94) 32%, rgba(7,7,7,.72) 58%, rgba(7,7,7,.38) 100%);
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,7,7,.98) 0%,
+                    rgba(7,7,7,.94) 32%,
+                    rgba(7,7,7,.72) 58%,
+                    rgba(7,7,7,.38) 100%
+                );
         }
-        .nav-link { position: relative; }
+
+        .nav-link {
+            position: relative;
+        }
+
         .nav-link::after {
-            content: ""; position: absolute; left: 0; bottom: -7px; width: 0; height: 2px; background: #F4B942; transition: width .25s ease;
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            background: #F4B942;
+            transition: width .25s ease;
         }
-        .nav-link:hover::after { width: 100%; }
-        .pizza-card img { transition: transform .6s ease; }
-        .pizza-card:hover img { transform: scale(1.06); }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .grain {
+            background-image:
+                radial-gradient(
+                    rgba(255,255,255,.035) 1px,
+                    transparent 1px
+                );
+
+            background-size:
+                18px 18px;
+        }
+
+        .pizza-card img {
+            transition:
+                transform .6s ease;
+        }
+
+        .pizza-card:hover img {
+            transform:
+                scale(1.06);
+        }
+
+        .gallery-card img {
+            transition:
+                transform .7s ease;
+        }
+
+        .gallery-card:hover img {
+            transform:
+                scale(1.07);
+        }
+
         .whatsapp-pulse::before {
-            content: ""; position: absolute; inset: 0; border-radius: 9999px; background: #25D366; animation: pulseWhatsApp 2s infinite; z-index: -1;
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background: #25D366;
+            animation: pulseWhatsApp 2s infinite;
+            z-index: -1;
         }
+
         @keyframes pulseWhatsApp {
-            0% { transform: scale(1); opacity: .45; }
-            70% { transform: scale(1.45); opacity: 0; }
-            100% { transform: scale(1.45); opacity: 0; }
+
+            0% {
+                transform: scale(1);
+                opacity: .45;
+            }
+
+            70% {
+                transform: scale(1.45);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1.45);
+                opacity: 0;
+            }
         }
+
     </style>
+
 </head>
 
-<body class="font-sans text-white antialiased">
+
+
+<body
+    class="font-sans text-white antialiased"
+>
+
 
     <!-- ======================================================
          HEADER
     ======================================================= -->
-    <header id="header" class="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-corleone-black/90 backdrop-blur-xl">
-        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
+    <header
+        id="header"
+        class="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-corleone-black/90 backdrop-blur-xl"
+    >
+
+        <div
+            class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8"
+        >
+
+
             <!-- LOGO -->
-            <a href="#inicio" class="flex items-center gap-3">
-                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-corleone-red text-corleone-gold shadow-lg">
-                    <i data-lucide="pizza" class="h-6 w-6"></i>
+            <a
+                href="#inicio"
+                class="flex items-center gap-3"
+            >
+
+                <div
+                    class="flex h-11 w-11 items-center justify-center rounded-full bg-corleone-red text-corleone-gold shadow-lg"
+                >
+                    <i
+                        data-lucide="pizza"
+                        class="h-6 w-6"
+                    ></i>
                 </div>
+
+
                 <div class="leading-tight">
-                    <span class="block font-display text-xl font-bold">Don Corleone</span>
-                    <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-corleone-gold">Pacaembu • Matriz 24h</span>
+
+                    <span
+                        class="block font-display text-xl font-bold"
+                    >
+                        Don Corleone
+                    </span>
+
+                    <span
+                        class="block text-[10px] font-bold uppercase tracking-[0.25em] text-corleone-gold"
+                    >
+                        Pacaembu • Matriz 24h
+                    </span>
+
                 </div>
+
             </a>
 
+
+
             <!-- MENU DESKTOP -->
-            <nav class="hidden items-center gap-8 lg:flex">
-                <a href="#cardapio" class="nav-link text-sm font-medium text-white/75 transition hover:text-white">Cardápio</a>
-                <a href="#experiencia" class="nav-link text-sm font-medium text-white/75 transition hover:text-white">Experiência</a>
-                <a href="#localizacao" class="nav-link text-sm font-medium text-white/75 transition hover:text-white">Localização</a>
-                <a href="https://www.instagram.com/doncorleonepizzarias/" target="_blank" rel="noopener noreferrer" class="nav-link text-sm font-medium text-white/75 transition hover:text-white">Instagram</a>
+            <nav
+                class="hidden items-center gap-8 lg:flex"
+            >
+
+                <a
+                    href="#cardapio"
+                    class="nav-link text-sm font-medium text-white/75 transition hover:text-white"
+                >
+                    Cardápio
+                </a>
+
+                <a
+                    href="#experiencia"
+                    class="nav-link text-sm font-medium text-white/75 transition hover:text-white"
+                >
+                    Experiência
+                </a>
+
+                <a
+                    href="#avaliacoes"
+                    class="nav-link text-sm font-medium text-white/75 transition hover:text-white"
+                >
+                    Avaliações
+                </a>
+
+                <a
+                    href="#localizacao"
+                    class="nav-link text-sm font-medium text-white/75 transition hover:text-white"
+                >
+                    Localização
+                </a>
+
+                <a
+                    href="https://www.instagram.com/doncorleonepizzarias/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="nav-link text-sm font-medium text-white/75 transition hover:text-white"
+                >
+                    Instagram
+                </a>
+
             </nav>
 
+
+
             <!-- CTA DESKTOP -->
-            <div class="hidden lg:flex items-center gap-4">
-                <a href="https://wa.me" target="_blank" class="flex items-center gap-2 rounded-full bg-corleone-green px-5 py-2.5 text-sm font-bold text-white transition hover:bg-green-600 shadow-whatsapp">
-                    <i data-lucide="phone" class="h-4 w-4"></i> Pedir Online
-                </a>
-            </div>
+            <a
+                href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hidden items-center gap-2 rounded-full bg-corleone-gold px-6 py-3 text-sm font-extrabold text-corleone-black transition hover:-translate-y-0.5 hover:bg-yellow-300 lg:flex"
+            >
+
+                <i
+                    data-lucide="shopping-bag"
+                    class="h-4 w-4"
+                ></i>
+
+                Pedir Agora
+
+            </a>
+
+
+
+            <!-- BOTÃO MENU MOBILE -->
+            <button
+                id="menuButton"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                class="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 lg:hidden"
+            >
+
+                <i
+                    data-lucide="menu"
+                    class="h-6 w-6"
+                ></i>
+
+            </button>
+
         </div>
+
+
+
+        <!-- MENU MOBILE -->
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-white/10 bg-corleone-black px-5 pb-6 pt-4 lg:hidden"
+        >
+
+            <nav class="flex flex-col gap-4">
+
+                <a
+                    href="#cardapio"
+                    class="mobile-link py-2 text-white/80"
+                >
+                    Cardápio
+                </a>
+
+                <a
+                    href="#experiencia"
+                    class="mobile-link py-2 text-white/80"
+                >
+                    Experiência
+                </a>
+
+                <a
+                    href="#avaliacoes"
+                    class="mobile-link py-2 text-white/80"
+                >
+                    Avaliações
+                </a>
+
+                <a
+                    href="#localizacao"
+                    class="mobile-link py-2 text-white/80"
+                >
+                    Localização
+                </a>
+
+                <a
+                    href="https://www.instagram.com/doncorleonepizzarias/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="py-2 text-white/80"
+                >
+                    Instagram
+                </a>
+
+
+                <a
+                    href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-2 flex items-center justify-center gap-2 rounded-xl bg-corleone-gold px-5 py-4 font-extrabold text-corleone-black"
+                >
+
+                    <i
+                        data-lucide="shopping-bag"
+                        class="h-5 w-5"
+                    ></i>
+
+                    Ver Cardápio e Pedir
+
+                </a>
+
+            </nav>
+
+        </div>
+
     </header>
 
-    <!-- ======================================================
-         HERO SECTION
-    ======================================================= -->
-    <section id="inicio" class="relative flex min-h-screen items-center bg-zinc-900 pt-20">
-        <div class="absolute inset-0 z-0">
-            <img src="https://unsplash.com" alt="Pizza de Forno a Lenha" class="h-full w-full object-cover opacity-40">
-            <div class="absolute inset-0 hero-overlay"></div>
-        </div>
-        
-        <div class="relative z-10 mx-auto max-w-7xl px-5 py-24 lg:px-8 w-full">
-            <div class="max-w-2xl">
-                <span class="inline-block rounded-full bg-corleone-red/20 px-4 py-1 text-xs font-bold uppercase tracking-widest text-corleone-gold border border-corleone-red/40 mb-6">
-                    Tradicional e Aberta 24 Horas
+
+
+
+    <main>
+
+
+        <!-- ======================================================
+             HERO
+        ======================================================= -->
+        <section
+            id="inicio"
+            class="relative flex min-h-screen items-center overflow-hidden bg-corleone-black pt-20"
+        >
+
+
+            <!-- IMAGEM REAL -->
+            <div class="absolute inset-0">
+
+                <img
+                    src="assets/pizza-salgada-don-corleone.jpg"
+                    alt="Pizza da Don Corleone Pizzaria Pacaembu"
+                    class="h-full w-full object-cover object-center"
+                >
+
+                <div
+                    class="hero-overlay absolute inset-0"
+                ></div>
+
+            </div>
+
+
+
+            <!-- EFEITO VISUAL -->
+            <div
+                class="absolute -left-24 top-32 h-96 w-96 rounded-full bg-corleone-red/20 blur-[130px]"
+            ></div>
+
+
+
+            <div
+                class="relative z-10 mx-auto w-full max-w-7xl px-5 py-24 lg:px-8"
+            >
+
+                <div
+                    class="max-w-3xl"
+                >
+
+
+                    <!-- BADGES -->
+                    <div
+                        class="mb-6 flex flex-wrap gap-2"
+                    >
+
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full border border-corleone-gold/30 bg-corleone-gold/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-corleone-gold backdrop-blur"
+                        >
+
+                            <i
+                                data-lucide="clock-3"
+                                class="h-4 w-4"
+                            ></i>
+
+                            Aberto 24 horas
+
+                        </span>
+
+
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-white backdrop-blur"
+                        >
+
+                            <i
+                                data-lucide="map-pin"
+                                class="h-4 w-4"
+                            ></i>
+
+                            Pacaembu • São Paulo
+
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- HEADLINE -->
+                    <h1
+                        class="font-display text-5xl font-bold leading-[1.02] sm:text-6xl lg:text-7xl"
+                    >
+
+                        Sua vontade de pizza
+
+                        <span
+                            class="block text-corleone-gold"
+                        >
+                            não tem hora.
+                        </span>
+
+                    </h1>
+
+
+
+                    <!-- SUB -->
+                    <p
+                        class="mt-7 max-w-2xl text-lg leading-8 text-white/75 sm:text-xl"
+                    >
+
+                        Don Corleone Pizzaria Pacaembu Matriz,
+                        aberta 24 horas.
+
+                        Escolha seu sabor, peça pelo cardápio online
+                        ou venha aproveitar a qualquer hora do dia ou da noite.
+
+                    </p>
+
+
+
+                    <!-- GOOGLE PROOF -->
+                    <a
+                        href="https://www.google.com/search?q=don+corleone+pacaembu"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-7 inline-flex flex-wrap items-center gap-3 rounded-2xl border border-white/10 bg-black/35 px-5 py-4 backdrop-blur transition hover:border-corleone-gold/40"
+                    >
+
+                        <span
+                            class="text-lg tracking-wider text-corleone-gold"
+                        >
+                            ★★★★★
+                        </span>
+
+                        <strong
+                            class="text-xl"
+                        >
+                            4,5
+                        </strong>
+
+                        <span
+                            class="text-sm text-white/60"
+                        >
+                            4.321 avaliações no Google
+                        </span>
+
+                        <i
+                            data-lucide="external-link"
+                            class="h-4 w-4 text-white/35"
+                        ></i>
+
+                    </a>
+
+
+
+                    <!-- BENEFÍCIOS -->
+                    <div
+                        class="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/75"
+                    >
+
+                        <span
+                            class="flex items-center gap-2"
+                        >
+
+                            <i
+                                data-lucide="clock"
+                                class="h-5 w-5 text-corleone-gold"
+                            ></i>
+
+                            Funcionamento 24h
+
+                        </span>
+
+
+                        <span
+                            class="flex items-center gap-2"
+                        >
+
+                            <i
+                                data-lucide="wifi"
+                                class="h-5 w-5 text-corleone-gold"
+                            ></i>
+
+                            Wi-Fi
+
+                        </span>
+
+
+                        <span
+                            class="flex items-center gap-2"
+                        >
+
+                            <i
+                                data-lucide="tv"
+                                class="h-5 w-5 text-corleone-gold"
+                            ></i>
+
+                            Bom para assistir a esportes
+
+                        </span>
+
+
+                        <span
+                            class="flex items-center gap-2"
+                        >
+
+                            <i
+                                data-lucide="wallet-cards"
+                                class="h-5 w-5 text-corleone-gold"
+                            ></i>
+
+                            R$ 20–100 por pessoa
+
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- CTAs -->
+                    <div
+                        class="mt-10 flex flex-col gap-4 sm:flex-row"
+                    >
+
+                        <a
+                            href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex min-h-[58px] items-center justify-center gap-2 rounded-full bg-corleone-gold px-8 py-4 text-base font-extrabold text-corleone-black shadow-glow transition hover:-translate-y-1 hover:bg-yellow-300"
+                        >
+
+                            Ver Cardápio Completo
+
+                            <i
+                                data-lucide="utensils"
+                                class="h-5 w-5"
+                            ></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/5511959156474"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex min-h-[58px] items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-8 py-4 text-base font-bold text-white backdrop-blur transition hover:-translate-y-1 hover:border-green-400/50 hover:bg-green-500/15"
+                        >
+
+                            <i
+                                data-lucide="message-circle"
+                                class="h-5 w-5 text-green-400"
+                            ></i>
+
+                            Reservar pelo WhatsApp
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- ENDEREÇO -->
+                    <p
+                        class="mt-6 flex items-center gap-2 text-sm text-white/50"
+                    >
+
+                        <i
+                            data-lucide="map-pin"
+                            class="h-4 w-4"
+                        ></i>
+
+                        Av. Pacaembu, 941 — Pacaembu, São Paulo - SP
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================================
+             BARRA DE CONFIANÇA
+        ======================================================= -->
+        <section
+            class="border-y border-white/10 bg-corleone-red"
+        >
+
+            <div
+                class="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-white/10 md:grid-cols-4"
+            >
+
+                <div
+                    class="px-4 py-6 text-center"
+                >
+
+                    <strong
+                        class="block text-xl font-extrabold text-corleone-gold sm:text-2xl"
+                    >
+                        24 horas
+                    </strong>
+
+                    <span
+                        class="text-xs text-white/70"
+                    >
+                        funcionamento
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="px-4 py-6 text-center"
+                >
+
+                    <strong
+                        class="block text-xl font-extrabold text-corleone-gold sm:text-2xl"
+                    >
+                        4,5 ★
+                    </strong>
+
+                    <span
+                        class="text-xs text-white/70"
+                    >
+                        avaliação no Google
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="px-4 py-6 text-center"
+                >
+
+                    <strong
+                        class="block text-xl font-extrabold text-corleone-gold sm:text-2xl"
+                    >
+                        4.321
+                    </strong>
+
+                    <span
+                        class="text-xs text-white/70"
+                    >
+                        avaliações
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="px-4 py-6 text-center"
+                >
+
+                    <strong
+                        class="block text-xl font-extrabold text-corleone-gold sm:text-2xl"
+                    >
+                        Pacaembu
+                    </strong>
+
+                    <span
+                        class="text-xs text-white/70"
+                    >
+                        São Paulo - SP
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================================
+             CARDÁPIO / DESTAQUES
+        ======================================================= -->
+        <section
+            id="cardapio"
+            class="bg-corleone-cream py-24 text-corleone-black"
+        >
+
+            <div
+                class="mx-auto max-w-7xl px-5 lg:px-8"
+            >
+
+
+                <!-- CABEÇALHO -->
+                <div
+                    class="mx-auto mb-14 max-w-3xl text-center"
+                >
+
+                    <span
+                        class="text-sm font-extrabold uppercase tracking-[0.25em] text-corleone-red"
+                    >
+                        Para abrir o apetite
+                    </span>
+
+
+                    <h2
+                        class="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl"
+                    >
+                        Tem pizza para qualquer hora.
+                    </h2>
+
+
+                    <p
+                        class="mt-5 text-base leading-7 text-black/60"
+                    >
+                        Veja algumas opções que ajudam a abrir o apetite
+                        e confira sabores e preços atualizados no cardápio oficial.
+                    </p>
+
+                </div>
+
+
+
+                <!-- CARDS -->
+                <div
+                    class="grid gap-7 md:grid-cols-2 lg:grid-cols-3"
+                >
+
+
+                    <!-- CARD 1 -->
+                    <article
+                        class="pizza-card overflow-hidden rounded-[2rem] bg-white shadow-card"
+                    >
+
+                        <div
+                            class="relative h-64 overflow-hidden"
+                        >
+
+                            <img
+                                src="assets/pizza-salgada-don-corleone.jpg"
+                                alt="Pizza salgada da Don Corleone"
+                                loading="lazy"
+                                class="h-full w-full object-cover"
+                            >
+
+                            <span
+                                class="absolute left-5 top-5 rounded-full bg-corleone-red px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-white"
+                            >
+                                Salgadas
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="p-6"
+                        >
+
+                            <h3
+                                class="font-display text-2xl font-bold"
+                            >
+                                Pizzas Salgadas
+                            </h3>
+
+
+                            <p
+                                class="mt-3 min-h-[72px] text-sm leading-6 text-black/60"
+                            >
+                                Escolha entre os sabores disponíveis
+                                no cardápio oficial e encontre a combinação
+                                que combina com sua fome.
+                            </p>
+
+
+                            <a
+                                href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-corleone-black px-5 py-3.5 font-bold text-white transition hover:bg-corleone-red"
+                            >
+
+                                Ver sabores
+
+                                <i
+                                    data-lucide="arrow-up-right"
+                                    class="h-4 w-4"
+                                ></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- CARD 2 -->
+                    <article
+                        class="pizza-card overflow-hidden rounded-[2rem] bg-white shadow-card"
+                    >
+
+                        <div
+                            class="relative h-64 overflow-hidden"
+                        >
+
+                            <img
+                                src="assets/pizza-doce-chocolate-morango.jpg"
+                                alt="Pizza doce de chocolate com morangos"
+                                loading="lazy"
+                                class="h-full w-full object-cover"
+                            >
+
+                            <span
+                                class="absolute left-5 top-5 rounded-full bg-corleone-gold px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-corleone-black"
+                            >
+                                Doces
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="p-6"
+                        >
+
+                            <h3
+                                class="font-display text-2xl font-bold"
+                            >
+                                Chocolate com Morango
+                            </h3>
+
+
+                            <p
+                                class="mt-3 min-h-[72px] text-sm leading-6 text-black/60"
+                            >
+                                Chocolate e morangos em uma combinação
+                                pensada para fechar o pedido com uma opção doce.
+                            </p>
+
+
+                            <a
+                                href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-corleone-black px-5 py-3.5 font-bold text-white transition hover:bg-corleone-red"
+                            >
+
+                                Ver no cardápio
+
+                                <i
+                                    data-lucide="arrow-up-right"
+                                    class="h-4 w-4"
+                                ></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- CARD 3 -->
+                    <article
+                        class="pizza-card overflow-hidden rounded-[2rem] bg-white shadow-card md:col-span-2 lg:col-span-1"
+                    >
+
+                        <div
+                            class="relative h-64 overflow-hidden"
+                        >
+
+                            <img
+                                src="assets/pizza-doce-chocolate-branco-morango.jpg"
+                                alt="Pizza doce de chocolate branco com morangos"
+                                loading="lazy"
+                                class="h-full w-full object-cover"
+                            >
+
+                            <span
+                                class="absolute left-5 top-5 rounded-full bg-corleone-black px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-corleone-gold"
+                            >
+                                Sobremesa
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="p-6"
+                        >
+
+                            <h3
+                                class="font-display text-2xl font-bold"
+                            >
+                                Chocolate Branco com Morango
+                            </h3>
+
+
+                            <p
+                                class="mt-3 min-h-[72px] text-sm leading-6 text-black/60"
+                            >
+                                Uma combinação cremosa e doce para quem
+                                não quer terminar a experiência na última fatia salgada.
+                            </p>
+
+
+                            <a
+                                href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-corleone-black px-5 py-3.5 font-bold text-white transition hover:bg-corleone-red"
+                            >
+
+                                Ver no cardápio
+
+                                <i
+                                    data-lucide="arrow-up-right"
+                                    class="h-4 w-4"
+                                ></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- CTA CARDÁPIO -->
+                <div
+                    class="mt-12 text-center"
+                >
+
+                    <a
+                        href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 rounded-full bg-corleone-red px-8 py-4 font-extrabold text-white transition hover:-translate-y-1 hover:bg-corleone-darkred"
+                    >
+
+                        Abrir Cardápio Completo
+
+                        <i
+                            data-lucide="external-link"
+                            class="h-5 w-5"
+                        ></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================================
+             GALERIA REAL
+        ======================================================= -->
+        <section
+            id="experiencia"
+            class="bg-[#0B0B0B] py-24"
+        >
+
+            <div
+                class="mx-auto max-w-7xl px-5 lg:px-8"
+            >
+
+
+                <!-- TEXTO -->
+                <div
+                    class="mb-12 max-w-2xl"
+                >
+
+                    <span
+                        class="text-sm font-extrabold uppercase tracking-[0.25em] text-corleone-gold"
+                    >
+                        Direto da Don Corleone
+                    </span>
+
+
+                    <h2
+                        class="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl"
+                    >
+
+                        Escolher vai ser a
+
+                        <span
+                            class="text-corleone-gold"
+                        >
+                            parte mais difícil.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="mt-5 text-lg leading-8 text-white/55"
+                    >
+                        Do salgado ao doce, tem pizza para transformar
+                        praticamente qualquer horário em hora de Don Corleone.
+                    </p>
+
+                </div>
+
+
+
+                <!-- GALERIA -->
+                <div
+                    class="grid auto-rows-[220px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+                >
+
+
+                    <!-- GRANDE -->
+                    <figure
+                        class="gallery-card group relative overflow-hidden rounded-[2rem] sm:col-span-2 sm:row-span-2"
+                    >
+
+                        <img
+                            src="assets/pizza-salgada-don-corleone.jpg"
+                            alt="Pizza salgada da Don Corleone"
+                            loading="lazy"
+                            class="h-full w-full object-cover"
+                        >
+
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/5 to-transparent"
+                        ></div>
+
+
+                        <figcaption
+                            class="absolute bottom-0 left-0 p-7"
+                        >
+
+                            <p
+                                class="text-xs font-extrabold uppercase tracking-[0.2em] text-corleone-gold"
+                            >
+                                Para dividir. Ou não.
+                            </p>
+
+
+                            <h3
+                                class="mt-1 font-display text-2xl font-bold"
+                            >
+                                Uma pizza para chamar de sua
+                            </h3>
+
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- DOCE 1 -->
+                    <figure
+                        class="gallery-card group relative overflow-hidden rounded-[2rem]"
+                    >
+
+                        <img
+                            src="assets/pizza-doce-chocolate-morango.jpg"
+                            alt="Pizza doce de chocolate com morangos"
+                            loading="lazy"
+                            class="h-full w-full object-cover"
+                        >
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"
+                        ></div>
+
+                        <span
+                            class="absolute bottom-5 left-5 font-bold"
+                        >
+                            Chocolate + Morango
+                        </span>
+
+                    </figure>
+
+
+
+                    <!-- DOCE 2 -->
+                    <figure
+                        class="gallery-card group relative overflow-hidden rounded-[2rem]"
+                    >
+
+                        <img
+                            src="assets/pizza-doce-chocolate-branco-morango.jpg"
+                            alt="Pizza de chocolate branco com morangos"
+                            loading="lazy"
+                            class="h-full w-full object-cover"
+                        >
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"
+                        ></div>
+
+                        <span
+                            class="absolute bottom-5 left-5 font-bold"
+                        >
+                            Chocolate Branco + Morango
+                        </span>
+
+                    </figure>
+
+
+
+                    <!-- QUEIJO -->
+                    <figure
+                        class="gallery-card group relative overflow-hidden rounded-[2rem] sm:col-span-2"
+                    >
+
+                        <img
+                            src="assets/pizza-queijo.jpg"
+                            alt="Pizza com queijo derretido"
+                            loading="lazy"
+                            class="h-full w-full object-cover object-center"
+                        >
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+                        ></div>
+
+                        <span
+                            class="absolute bottom-5 left-5 pr-5 font-display text-xl font-bold"
+                        >
+                            Daquelas que já dão vontade pela foto.
+                        </span>
+
+                    </figure>
+
+                </div>
+
+
+
+                <!-- CTA -->
+                <div
+                    class="mt-10 text-center"
+                >
+
+                    <a
+                        href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-2 rounded-full bg-corleone-gold px-8 py-4 font-extrabold text-corleone-black transition hover:-translate-y-1 hover:bg-yellow-300"
+                    >
+
+                        <i
+                            data-lucide="utensils"
+                            class="h-5 w-5"
+                        ></i>
+
+                        Quero ver todos os sabores
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================================
+             POR QUE ESCOLHER
+        ======================================================= -->
+        <section
+            class="grain relative overflow-hidden bg-corleone-graphite py-24"
+        >
+
+            <div
+                class="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-corleone-red/10 blur-[130px]"
+            ></div>
+
+
+            <div
+                class="relative mx-auto max-w-7xl px-5 lg:px-8"
+            >
+
+                <div
+                    class="grid items-center gap-16 lg:grid-cols-[.9fr_1.1fr]"
+                >
+
+
+                    <!-- TEXTO -->
+                    <div>
+
+                        <span
+                            class="text-sm font-extrabold uppercase tracking-[0.25em] text-corleone-gold"
+                        >
+                            Don Corleone Pacaembu
+                        </span>
+
+
+                        <h2
+                            class="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl"
+                        >
+
+                            Pizza, encontro e conveniência
+
+                            <span
+                                class="text-corleone-gold"
+                            >
+                                24 horas por dia.
+                            </span>
+
+                        </h2>
+
+
+                        <p
+                            class="mt-6 max-w-xl text-lg leading-8 text-white/60"
+                        >
+                            A unidade matriz do Pacaembu é uma opção
+                            para quem quer pedir pizza, encontrar amigos,
+                            assistir a esportes ou fazer uma pausa
+                            em diferentes horários.
+                        </p>
+
+
+                        <a
+                            href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-8 inline-flex items-center gap-2 font-bold text-corleone-gold transition hover:text-yellow-300"
+                        >
+
+                            Conferir o cardápio
+
+                            <i
+                                data-lucide="arrow-right"
+                                class="h-5 w-5"
+                            ></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- CARDS -->
+                    <div
+                        class="grid gap-5 sm:grid-cols-2"
+                    >
+
+
+                        <!-- 24 HORAS -->
+                        <article
+                            class="rounded-3xl border border-white/10 bg-white/[0.04] p-7 sm:col-span-2"
+                        >
+
+                            <div
+                                class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-corleone-red text-corleone-gold"
+                            >
+
+                                <i
+                                    data-lucide="clock-3"
+                                    class="h-7 w-7"
+                                ></i>
+
+                            </div>
+
+
+                            <h3
+                                class="font-display text-2xl font-bold"
+                            >
+                                Funcionamento 24 horas
+                            </h3>
+
+
+                            <p
+                                class="mt-3 leading-7 text-white/55"
+                            >
+                                Uma opção no Pacaembu para diferentes
+                                momentos do dia, da noite e da madrugada.
+                            </p>
+
+                        </article>
+
+
+
+                        <!-- HAPPY HOUR -->
+                        <article
+                            class="rounded-3xl border border-white/10 bg-white/[0.04] p-7"
+                        >
+
+                            <div
+                                class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-corleone-gold text-corleone-black"
+                            >
+
+                                <i
+                                    data-lucide="glass-water"
+                                    class="h-7 w-7"
+                                ></i>
+
+                            </div>
+
+
+                            <h3
+                                class="font-display text-xl font-bold"
+                            >
+                                Happy hour
+                            </h3>
+
+
+                            <p
+                                class="mt-3 text-sm leading-6 text-white/55"
+                            >
+                                Uma opção para encontros com amigos,
+                                pausas depois do trabalho e momentos descontraídos.
+                            </p>
+
+                        </article>
+
+
+
+                        <!-- ESPORTES -->
+                        <article
+                            class="rounded-3xl border border-white/10 bg-white/[0.04] p-7"
+                        >
+
+                            <div
+                                class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-corleone-gold text-corleone-black"
+                            >
+
+                                <i
+                                    data-lucide="tv"
+                                    class="h-7 w-7"
+                                ></i>
+
+                            </div>
+
+
+                            <h3
+                                class="font-display text-xl font-bold"
+                            >
+                                Esportes + Wi-Fi
+                            </h3>
+
+
+                            <p
+                                class="mt-3 text-sm leading-6 text-white/55"
+                            >
+                                A unidade conta com Wi-Fi e é indicada
+                                como uma opção para acompanhar esportes.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================================
+             CTA INTERMEDIÁRIO
+        ======================================================= -->
+        <section
+            class="bg-corleone-red py-16"
+        >
+
+            <div
+                class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-5 text-center lg:flex-row lg:px-8 lg:text-left"
+            >
+
+                <div>
+
+                    <p
+                        class="text-sm font-extrabold uppercase tracking-[0.2em] text-corleone-gold"
+                    >
+                        24h no Pacaembu
+                    </p>
+
+
+                    <h2
+                        class="mt-2 font-display text-3xl font-bold sm:text-4xl"
+                    >
+                        Bateu a vontade de pizza?
+                    </h2>
+
+
+                    <p
+                        class="mt-2 text-white/70"
+                    >
+                        Abra o cardápio oficial e escolha seu pedido.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-8 py-4 font-extrabold text-corleone-black shadow-xl transition hover:-translate-y-1 hover:bg-corleone-gold"
+                >
+
+                    <i
+                        data-lucide="shopping-bag"
+                        class="h-5 w-5"
+                    ></i>
+
+                    Pedir Agora
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================================
+             AVALIAÇÕES
+        ======================================================= -->
+        <section
+            id="avaliacoes"
+            class="relative overflow-hidden bg-corleone-black py-24"
+        >
+
+            <div
+                class="absolute left-1/2 top-0 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-corleone-red/10 blur-[140px]"
+            ></div>
+
+
+            <div
+                class="relative mx-auto max-w-7xl px-5 lg:px-8"
+            >
+
+
+                <!-- TÍTULO -->
+                <div
+                    class="mx-auto mb-14 max-w-3xl text-center"
+                >
+
+                    <span
+                        class="text-sm font-extrabold uppercase tracking-[0.25em] text-corleone-gold"
+                    >
+                        Quem prova, conta
+                    </span>
+
+
+                    <h2
+                        class="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl"
+                    >
+
+                        O que os clientes
+
+                        <span
+                            class="text-corleone-gold"
+                        >
+                            estão dizendo.
+                        </span>
+
+                    </h2>
+
+
+
+                    <!-- NOTA GOOGLE -->
+                    <a
+                        href="https://www.google.com/search?q=don+corleone+pacaembu"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-7 inline-flex flex-wrap items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4 transition hover:border-corleone-gold/30"
+                    >
+
+                        <span
+                            class="text-xl font-bold text-corleone-gold"
+                        >
+                            ★★★★★
+                        </span>
+
+                        <strong
+                            class="text-2xl"
+                        >
+                            4,5
+                        </strong>
+
+                        <span
+                            class="text-sm text-white/55"
+                        >
+                            4.321 avaliações no Google
+                        </span>
+
+                        <i
+                            data-lucide="external-link"
+                            class="h-4 w-4 text-white/35"
+                        ></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- DEPOIMENTOS -->
+                <div
+                    class="grid gap-6 lg:grid-cols-3"
+                >
+
+
+                    <!-- ERIKA -->
+                    <article
+                        class="flex flex-col rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition hover:-translate-y-1 hover:border-corleone-gold/30"
+                    >
+
+                        <div
+                            class="mb-6 flex h-11 w-11 items-center justify-center rounded-full bg-corleone-red font-display text-lg font-bold"
+                        >
+                            E
+                        </div>
+
+
+                        <blockquote
+                            class="flex-1 font-display text-xl leading-8 text-white/85"
+                        >
+                            “Pizzas delícias e vale o preço,
+                            seja na loja ou delivery 😋”
+                        </blockquote>
+
+
+                        <div
+                            class="mt-7 border-t border-white/10 pt-5"
+                        >
+
+                            <strong
+                                class="block"
+                            >
+                                Erika Correa
+                            </strong>
+
+
+                            <span
+                                class="mt-1 flex items-center gap-2 text-xs text-white/40"
+                            >
+
+                                <i
+                                    data-lucide="badge-check"
+                                    class="h-4 w-4 text-corleone-gold"
+                                ></i>
+
+                                Avaliação publicada no Google
+
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- WILLIAN -->
+                    <article
+                        class="flex flex-col rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 transition hover:-translate-y-1 hover:border-corleone-gold/30"
+                    >
+
+                        <div
+                            class="mb-6 flex h-11 w-11 items-center justify-center rounded-full bg-corleone-gold font-display text-lg font-bold text-corleone-black"
+                        >
+                            W
+                        </div>
+
+
+                        <blockquote
+                            class="flex-1 font-display text-xl leading-8 text-white/85"
+                        >
+                            “Da massa crocante ao molho caseiro,
+                            cada fatia é uma obra-prima gastronômica.”
+                        </blockquote>
+
+
+                        <div
+                            class="mt-7 border-t border-white/10 pt-5"
+                        >
+
+                            <strong
+                                class="block"
+                            >
+                                Willian Bastos
+                            </strong>
+
+
+                            <span
+                                class="mt-1 flex items-center gap-2 text-xs text-white/40"
+                            >
+
+                                <i
+                                    data-lucide="badge-check"
+                                    class="h-4 w-4 text-corleone-gold"
+                                ></i>
+
+                                Avaliação publicada no Google
+
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- CAROLINA -->
+                    <article
+                        class="relative flex flex-col overflow-hidden rounded-[2rem] border border-corleone-gold/20 bg-corleone-red p-7"
+                    >
+
+                        <div
+                            class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-corleone-gold/15"
+                        ></div>
+
+
+                        <div
+                            class="relative mb-6 flex h-11 w-11 items-center justify-center rounded-full bg-corleone-gold font-display text-lg font-bold text-corleone-black"
+                        >
+                            C
+                        </div>
+
+
+                        <blockquote
+                            class="relative flex-1 font-display text-xl leading-8"
+                        >
+                            “Uma das melhores pizzas que já provei!!!
+                            Atendimento excelente, pizzaria 24 horas,
+                            sabor e qualidade impecáveis!!!”
+                        </blockquote>
+
+
+                        <div
+                            class="relative mt-7 border-t border-white/15 pt-5"
+                        >
+
+                            <strong
+                                class="block"
+                            >
+                                Carolina Alves
+                            </strong>
+
+
+                            <span
+                                class="mt-1 flex items-center gap-2 text-xs text-white/60"
+                            >
+
+                                <i
+                                    data-lucide="badge-check"
+                                    class="h-4 w-4 text-corleone-gold"
+                                ></i>
+
+                                Avaliação publicada no Google
+
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- CTA GOOGLE -->
+                <div
+                    class="mt-10 text-center"
+                >
+
+                    <a
+                        href="https://www.google.com/search?q=don+corleone+pacaembu"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 text-sm font-bold text-corleone-gold transition hover:text-yellow-300"
+                    >
+
+                        Ver mais avaliações no Google
+
+                        <i
+                            data-lucide="arrow-up-right"
+                            class="h-4 w-4"
+                        ></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================================
+             LOCALIZAÇÃO
+        ======================================================= -->
+        <section
+            id="localizacao"
+            class="bg-[#0B0B0B] py-24"
+        >
+
+            <div
+                class="mx-auto max-w-7xl px-5 lg:px-8"
+            >
+
+
+                <div
+                    class="grid gap-12 lg:grid-cols-2"
+                >
+
+
+                    <!-- FOTO + ENDEREÇO -->
+                    <div>
+
+
+                        <div
+                            class="relative overflow-hidden rounded-[2rem] border border-white/10"
+                        >
+
+                            <img
+                                src="assets/fachada-don-corleone-pacaembu.jpg"
+                                alt="Fachada da Don Corleone Pizzaria Pacaembu Matriz"
+                                loading="lazy"
+                                class="h-[520px] w-full object-cover"
+                            >
+
+
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/5 to-transparent"
+                            ></div>
+
+
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-7 sm:p-9"
+                            >
+
+                                <span
+                                    class="inline-flex items-center gap-2 rounded-full bg-green-500 px-4 py-2 text-xs font-extrabold text-white"
+                                >
+
+                                    <span
+                                        class="h-2 w-2 rounded-full bg-white"
+                                    ></span>
+
+                                    Aberto 24 horas
+
+                                </span>
+
+
+                                <h2
+                                    class="mt-4 font-display text-3xl font-bold sm:text-4xl"
+                                >
+                                    Don Corleone Pacaembu Matriz
+                                </h2>
+
+
+                                <p
+                                    class="mt-3 flex items-start gap-2 text-sm leading-6 text-white/70"
+                                >
+
+                                    <i
+                                        data-lucide="map-pin"
+                                        class="mt-0.5 h-4 w-4 shrink-0 text-corleone-gold"
+                                    ></i>
+
+                                    Av. Pacaembu, 941 - Pacaembu,
+                                    São Paulo - SP, 01234-000
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DADOS -->
+                    <div
+                        class="flex flex-col justify-center"
+                    >
+
+                        <span
+                            class="text-sm font-extrabold uppercase tracking-[0.25em] text-corleone-gold"
+                        >
+                            Visite ou entre em contato
+                        </span>
+
+
+                        <h2
+                            class="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl"
+                        >
+                            Pacaembu,
+                            São Paulo.
+                            <span
+                                class="text-corleone-gold"
+                            >
+                                Estamos abertos 24h.
+                            </span>
+                        </h2>
+
+
+
+                        <div
+                            class="mt-9 space-y-6"
+                        >
+
+
+                            <!-- ENDEREÇO -->
+                            <div
+                                class="flex gap-4"
+                            >
+
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-corleone-red"
+                                >
+
+                                    <i
+                                        data-lucide="map-pin"
+                                        class="h-5 w-5"
+                                    ></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong
+                                        class="block"
+                                    >
+                                        Endereço
+                                    </strong>
+
+                                    <p
+                                        class="mt-1 leading-6 text-white/55"
+                                    >
+                                        Av. Pacaembu, 941 - Pacaembu<br>
+                                        São Paulo - SP, 01234-000
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- HORÁRIO -->
+                            <div
+                                class="flex gap-4"
+                            >
+
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-corleone-red"
+                                >
+
+                                    <i
+                                        data-lucide="clock-3"
+                                        class="h-5 w-5"
+                                    ></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong
+                                        class="block"
+                                    >
+                                        Funcionamento
+                                    </strong>
+
+                                    <p
+                                        class="mt-1 text-white/55"
+                                    >
+                                        Aberto 24 horas
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- TELEFONE -->
+                            <div
+                                class="flex gap-4"
+                            >
+
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-corleone-red"
+                                >
+
+                                    <i
+                                        data-lucide="phone"
+                                        class="h-5 w-5"
+                                    ></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong
+                                        class="block"
+                                    >
+                                        Telefone
+                                    </strong>
+
+                                    <a
+                                        href="tel:+551125322652"
+                                        class="mt-1 block text-white/55 transition hover:text-corleone-gold"
+                                    >
+                                        (11) 2532-2652
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- FAIXA DE PREÇO -->
+                            <div
+                                class="flex gap-4"
+                            >
+
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-corleone-red"
+                                >
+
+                                    <i
+                                        data-lucide="wallet-cards"
+                                        class="h-5 w-5"
+                                    ></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong
+                                        class="block"
+                                    >
+                                        Faixa de preço
+                                    </strong>
+
+                                    <p
+                                        class="mt-1 text-white/55"
+                                    >
+                                        R$ 20–100 por pessoa
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- BOTÕES -->
+                        <div
+                            class="mt-9 grid gap-4 sm:grid-cols-2"
+                        >
+
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Av.+Pacaembu,+941,+Pacaembu,+São+Paulo,+SP"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-4 font-bold transition hover:bg-white/10"
+                            >
+
+                                <i
+                                    data-lucide="navigation"
+                                    class="h-5 w-5 text-corleone-gold"
+                                ></i>
+
+                                Como chegar
+
+                            </a>
+
+
+                            <a
+                                href="tel:+551125322652"
+                                class="flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-4 font-bold transition hover:bg-white/10"
+                            >
+
+                                <i
+                                    data-lucide="phone-call"
+                                    class="h-5 w-5 text-corleone-gold"
+                                ></i>
+
+                                Ligar agora
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================================
+             CTA FINAL
+        ======================================================= -->
+        <section
+            class="relative overflow-hidden bg-corleone-gold py-20 text-corleone-black"
+        >
+
+            <div
+                class="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-corleone-red/10"
+            ></div>
+
+
+            <div
+                class="relative mx-auto max-w-4xl px-5 text-center"
+            >
+
+                <span
+                    class="text-sm font-extrabold uppercase tracking-[0.25em] text-corleone-red"
+                >
+                    Estamos abertos 24 horas
                 </span>
-                <h1 class="font-display text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl mb-6 leading-tight">
-                    A verdadeira pizza paulistana, <span class="text-corleone-gold">a qualquer hora.</span>
-                </h1>
-                <p class="text-lg text-corleone-muted mb-10 max-w-lg leading-relaxed">
-                    Massa artesanal de longa fermentação, ingredientes premium e o tradicional forno a lenha no coração do Pacaembu.
+
+
+                <h2
+                    class="mt-4 font-display text-4xl font-bold leading-tight sm:text-5xl"
+                >
+                    Se a vontade apareceu,
+                    <br class="hidden sm:block">
+                    a pizza também pode aparecer.
+                </h2>
+
+
+                <p
+                    class="mx-auto mt-5 max-w-2xl text-lg text-black/65"
+                >
+                    Confira o cardápio da unidade Pacaembu
+                    e escolha seu próximo pedido.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#cardapio" class="inline-flex items-center justify-center rounded-xl bg-corleone-red px-8 py-4 font-bold text-white transition hover:bg-corleone-darkred shadow-glow">
-                        Ver Cardápio
+
+
+
+                <div
+                    class="mt-9 flex flex-col justify-center gap-4 sm:flex-row"
+                >
+
+                    <a
+                        href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-2 rounded-full bg-corleone-black px-8 py-4 font-extrabold text-white transition hover:-translate-y-1 hover:bg-corleone-red"
+                    >
+
+                        <i
+                            data-lucide="shopping-bag"
+                            class="h-5 w-5"
+                        ></i>
+
+                        Ver Cardápio e Pedir
+
                     </a>
-                    <a href="#localizacao" class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-bold text-white backdrop-blur-sm transition hover:bg-white/10">
-                        Como Chegar
+
+
+                    <a
+                        href="https://wa.me/5511959156474"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-corleone-black px-8 py-4 font-extrabold transition hover:-translate-y-1 hover:bg-corleone-black hover:text-white"
+                    >
+
+                        <i
+                            data-lucide="message-circle"
+                            class="h-5 w-5"
+                        ></i>
+
+                        Fazer uma Reserva
+
                     </a>
+
                 </div>
+
             </div>
-        </div>
-    </section>
+
+        </section>
+
+
+
+
+        <!-- ======================================================
+             FOOTER
+        ======================================================= -->
+        <footer
+            class="border-t border-white/10 bg-[#070707]"
+        >
+
+            <div
+                class="mx-auto max-w-7xl px-5 py-14 lg:px-8"
+            >
+
+                <div
+                    class="grid gap-10 md:grid-cols-2 lg:grid-cols-4"
+                >
+
+
+                    <!-- MARCA -->
+                    <div>
+
+                        <a
+                            href="#inicio"
+                            class="flex items-center gap-3"
+                        >
+
+                            <div
+                                class="flex h-11 w-11 items-center justify-center rounded-full bg-corleone-red text-corleone-gold"
+                            >
+
+                                <i
+                                    data-lucide="pizza"
+                                    class="h-6 w-6"
+                                ></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong
+                                    class="block font-display text-xl"
+                                >
+                                    Don Corleone
+                                </strong>
+
+                                <span
+                                    class="text-[10px] uppercase tracking-[0.25em] text-corleone-gold"
+                                >
+                                    Pacaembu Matriz 24h
+                                </span>
+
+                            </div>
+
+                        </a>
+
+
+                        <p
+                            class="mt-5 max-w-xs text-sm leading-6 text-white/45"
+                        >
+                            Pizzaria no Pacaembu, São Paulo,
+                            aberta 24 horas.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- FUNCIONAMENTO -->
+                    <div>
+
+                        <h3
+                            class="font-display text-lg font-bold text-corleone-gold"
+                        >
+                            Funcionamento
+                        </h3>
+
+
+                        <p
+                            class="mt-5 text-sm text-white/55"
+                        >
+                            Aberto 24 horas
+                        </p>
+
+
+                        <p
+                            class="mt-2 text-sm text-white/40"
+                        >
+                            Faixa de preço:
+                            R$ 20–100 por pessoa
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ENDEREÇO -->
+                    <div>
+
+                        <h3
+                            class="font-display text-lg font-bold text-corleone-gold"
+                        >
+                            Endereço
+                        </h3>
+
+
+                        <p
+                            class="mt-5 text-sm leading-6 text-white/55"
+                        >
+                            Av. Pacaembu, 941<br>
+                            Pacaembu<br>
+                            São Paulo - SP<br>
+                            01234-000
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- CONTATO -->
+                    <div>
+
+                        <h3
+                            class="font-display text-lg font-bold text-corleone-gold"
+                        >
+                            Contato
+                        </h3>
+
+
+                        <a
+                            href="tel:+551125322652"
+                            class="mt-5 block text-sm text-white/55 transition hover:text-white"
+                        >
+                            (11) 2532-2652
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/5511959156474"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-3 block text-sm text-white/55 transition hover:text-white"
+                        >
+                            WhatsApp para reservas
+                        </a>
+
+
+
+                        <!-- REDES -->
+                        <div
+                            class="mt-5 flex gap-3"
+                        >
+
+                            <a
+                                href="https://www.instagram.com/doncorleonepizzarias/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram da Don Corleone"
+                                class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-corleone-gold hover:bg-corleone-gold hover:text-corleone-black"
+                            >
+
+                                <i
+                                    data-lucide="instagram"
+                                    class="h-5 w-5"
+                                ></i>
+
+                            </a>
+
+
+                            <a
+                                href="https://wa.me/5511959156474"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="WhatsApp da Don Corleone"
+                                class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-green-400 hover:bg-green-500"
+                            >
+
+                                <i
+                                    data-lucide="message-circle"
+                                    class="h-5 w-5"
+                                ></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COPYRIGHT -->
+                <div
+                    class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between"
+                >
+
+                    <p>
+                        ©
+                        <span id="currentYear"></span>
+                        Don Corleone Pizzaria Pacaembu.
+                        Todos os direitos reservados.
+                    </p>
+
+
+                    <div
+                        class="flex flex-wrap gap-5"
+                    >
+
+                        <a
+                            href="https://app.anota.ai/48-horas-pizza-av-pacaembu?utm_source=portal-share-btn&from=msa"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="transition hover:text-white"
+                        >
+                            Cardápio
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/5511959156474"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="transition hover:text-white"
+                        >
+                            Reservas
+                        </a>
+
+
+                        <a
+                            href="https://www.instagram.com/doncorleonepizzarias/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="transition hover:text-white"
+                        >
+                            Instagram
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+
 
     <!-- ======================================================
-         CARDÁPIO DE DESTAQUES
+         WHATSAPP FLUTUANTE
     ======================================================= -->
-    <section id="cardapio" class="py-24 bg-corleone-graphite">
-        <div class="mx-auto max-w-7xl px-5 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="font-display text-4xl font-bold mb-4 sm:text-5xl">As Mais Pedidas da Máfia</h2>
-                <p class="text-corleone-muted">Receitas tradicionais feitas com insumos importados e molho de tomate artesanal.</p>
-            </div>
+    <a
+        href="https://wa.me/5511959156474"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar com a Don Corleone pelo WhatsApp"
+        title="Reservar pelo WhatsApp"
+        class="whatsapp-pulse fixed bottom-5 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-whatsapp transition hover:-translate-y-1 hover:scale-105"
+    >
 
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <!-- Pizza 1 -->
-                <div class="pizza-card overflow-hidden rounded-2xl bg-corleone-black border border-white/5 p-4 shadow-card">
-                    <div class="overflow-hidden rounded-xl h-56 bg-zinc-800 mb-6">
-                        <img src="https://unsplash.com" alt="Pizza Margherita" class="h-full w-full object-cover">
-                    </div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="font-display text-xl font-bold">Margherita Speciale</h3>
-                        <span class="text-corleone-gold font-bold">R$ 68</span>
-                    </div>
-                    <p class="text-sm text-corleone-muted leading-relaxed">Muçarela de búfala artesanal, tomate cereja, manjericão fresco e azeite extravirgem sobre molho artesanal.</p>
-                </div>
+        <i
+            data-lucide="message-circle"
+            class="h-8 w-8"
+        ></i>
 
-                <!-- Pizza 2 -->
-                <div class="pizza-card overflow-hidden rounded-2xl bg-corleone-black border border-white/5 p-4 shadow-card">
-                    <div class="overflow-hidden rounded-xl h-56 bg-zinc-800 mb-6">
+    </a>
+
+
+
+
+    <!-- ======================================================
+         JAVASCRIPT
+    ======================================================= -->
+    <script>
+
+        /* ==========================================
+           Inicializa ícones Lucide
+        ========================================== */
+        lucide.createIcons();
+
+
+
+        /* ==========================================
+           Ano automático no footer
+        ========================================== */
+        const yearElement =
+            document.getElementById("currentYear");
+
+        if (yearElement) {
+            yearElement.textContent =
+                new Date().getFullYear();
+        }
+
+
+
+        /* ==========================================
+           Menu mobile
+        ========================================== */
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+        const mobileLinks =
+            document.querySelectorAll(".mobile-link");
+
+
+        if (
+            menuButton &&
+            mobileMenu
+        ) {
+
+            menuButton.addEventListener(
+                "click",
+                () => {
+
+                    const isHidden =
+                        mobileMenu.classList.contains("hidden");
+
+                    mobileMenu
+                        .classList
+                        .toggle("hidden");
+
+                    menuButton
+                        .setAttribute(
+                            "aria-expanded",
+                            isHidden
+                                ? "true"
+                                : "false"
+                        );
+
+                }
+            );
+
+        }
+
+
+
+        /* ==========================================
+           Fecha menu mobile ao clicar nos links
+        ========================================== */
+        mobileLinks.forEach(
+            link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        mobileMenu
+                            ?.classList
+                            .add("hidden");
+
+                        menuButton
+                            ?.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        /* ==========================================
+           Header ganha mais fundo ao rolar
+        ========================================== */
+        const header =
+            document.getElementById("header");
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                if (!header) {
+                    return;
+                }
+
+                if (window.scrollY > 30) {
+
+                    header.classList.add(
+                        "shadow-xl"
+                    );
+
+                } else {
+
+                    header.classList.remove(
+                        "shadow-xl"
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
