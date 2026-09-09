@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Corleone Pizzaria Pacaembu | Pizzaria 24 Horas em São Paulo</title>
+    <meta name="description" content="Don Corleone Pizzaria Pacaembu Matriz, aberta 24 horas em São Paulo. Confira o cardápio, faça seu pedido online ou reserve pelo WhatsApp.">
+    <meta name="theme-color" content="#111111">
+
+    <!-- ======================================================
+         TAILWIND CSS
+    ======================================================= -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ======================================================
+         GOOGLE FONTS
+    ======================================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ======================================================
+         LUCIDE ICONS
+    ======================================================= -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- ======================================================
+         CONFIGURAÇÃO DO TAILWIND
+    ======================================================= -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corleone: {
+                            red: "#8B1118",
+                            darkred: "#5C090D",
+                            black: "#111111",
+                            graphite: "#1A1A1A",
+                            gold: "#F4B942",
+                            cream: "#FFF7E8",
+                            muted: "#B8B8B8",
+                            green: "#25D366"
+                        }
+                    },
+                    fontFamily: {
+                        sans: ["DM Sans", "sans-serif"],
+                        display: ["Playfair Display", "serif"]
+                    },
+                    boxShadow: {
+                        glow: "0 18px 50px rgba(139,17,24,.32)",
+                        card: "0 18px 55px rgba(0,0,0,.18)",
+                        whatsapp: "0 12px 40px rgba(37,211,102,.42)"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- ======================================================
+         CSS EXTRA
+    ======================================================= -->
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background: #111111; }
+        ::selection { background: #F4B942; color: #111111; }
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(7,7,7,.98) 0%, rgba(7,7,7,.94) 32%, rgba(7,7,7,.72) 58%, rgba(7,7,7,.38) 100%);
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ""; position: absolute; left: 0; bottom: -7px; width: 0; height: 2px; background: #F4B942; transition: width .25s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .pizza-card img { transition: transform .6s ease; }
+        .pizza-card:hover img { transform: scale(1.06); }
+        .whatsapp-pulse::before {
+            content: ""; position: absolute; inset: 0; border-radius: 9999px; background: #25D366; animation: pulseWhatsApp 2s infinite; z-index: -1;
+        }
+        @keyframes pulseWhatsApp {
+            0% { transform: scale(1); opacity: .45; }
+            70% { transform: scale(1.45); opacity: 0; }
+            100% { transform: scale(1.45); opacity: 0; }
+        }
+    </style>
+</head>
+
+<body class="font-sans text-white antialiased">
+
+    <!-- ======================================================
+         HEADER
+    ======================================================= -->
+    <header id="header" class="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-corleone-black/90 backdrop-blur-xl">
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
+            <!-- LOGO -->
+            <a href="#inicio" class="flex items-center gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-corleone-red text-corleone-gold shadow-lg">
+                    <i data-lucide="pizza" class="h-6 w-6"></i>
+                </div>
+                <div class="leading-tight">
+                    <span class="block font-display text-xl font-bold">Don Corleone</span>
+                    <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-corleone-gold">Pacaembu • Matriz 24h</span>
+                </div>
+            </a>
+
+            <!-- MENU DESKTOP -->
+            <nav class="hidden items-center gap-8 lg:flex">
+                <a href="#cardapio" class="nav-link text-sm font-medium text-white/75 transition hover:text-white">Cardápio</a>
+                <a href="#experiencia" class="nav-link text-sm font-medium text-white/75 transition hover:text-white">Experiência</a>
+                <a href="#localizacao" class="nav-link text-sm font-medium text-white/75 transition hover:text-white">Localização</a>
+                <a href="https://www.instagram.com/doncorleonepizzarias/" target="_blank" rel="noopener noreferrer" class="nav-link text-sm font-medium text-white/75 transition hover:text-white">Instagram</a>
+            </nav>
+
+            <!-- CTA DESKTOP -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://wa.me" target="_blank" class="flex items-center gap-2 rounded-full bg-corleone-green px-5 py-2.5 text-sm font-bold text-white transition hover:bg-green-600 shadow-whatsapp">
+                    <i data-lucide="phone" class="h-4 w-4"></i> Pedir Online
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================================================
+         HERO SECTION
+    ======================================================= -->
+    <section id="inicio" class="relative flex min-h-screen items-center bg-zinc-900 pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://unsplash.com" alt="Pizza de Forno a Lenha" class="h-full w-full object-cover opacity-40">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 mx-auto max-w-7xl px-5 py-24 lg:px-8 w-full">
+            <div class="max-w-2xl">
+                <span class="inline-block rounded-full bg-corleone-red/20 px-4 py-1 text-xs font-bold uppercase tracking-widest text-corleone-gold border border-corleone-red/40 mb-6">
+                    Tradicional e Aberta 24 Horas
+                </span>
+                <h1 class="font-display text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl mb-6 leading-tight">
+                    A verdadeira pizza paulistana, <span class="text-corleone-gold">a qualquer hora.</span>
+                </h1>
+                <p class="text-lg text-corleone-muted mb-10 max-w-lg leading-relaxed">
+                    Massa artesanal de longa fermentação, ingredientes premium e o tradicional forno a lenha no coração do Pacaembu.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#cardapio" class="inline-flex items-center justify-center rounded-xl bg-corleone-red px-8 py-4 font-bold text-white transition hover:bg-corleone-darkred shadow-glow">
+                        Ver Cardápio
+                    </a>
+                    <a href="#localizacao" class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-bold text-white backdrop-blur-sm transition hover:bg-white/10">
+                        Como Chegar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================
+         CARDÁPIO DE DESTAQUES
+    ======================================================= -->
+    <section id="cardapio" class="py-24 bg-corleone-graphite">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-display text-4xl font-bold mb-4 sm:text-5xl">As Mais Pedidas da Máfia</h2>
+                <p class="text-corleone-muted">Receitas tradicionais feitas com insumos importados e molho de tomate artesanal.</p>
+            </div>
+
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Pizza 1 -->
+                <div class="pizza-card overflow-hidden rounded-2xl bg-corleone-black border border-white/5 p-4 shadow-card">
+                    <div class="overflow-hidden rounded-xl h-56 bg-zinc-800 mb-6">
+                        <img src="https://unsplash.com" alt="Pizza Margherita" class="h-full w-full object-cover">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-bold">Margherita Speciale</h3>
+                        <span class="text-corleone-gold font-bold">R$ 68</span>
+                    </div>
+                    <p class="text-sm text-corleone-muted leading-relaxed">Muçarela de búfala artesanal, tomate cereja, manjericão fresco e azeite extravirgem sobre molho artesanal.</p>
+                </div>
+
+                <!-- Pizza 2 -->
+                <div class="pizza-card overflow-hidden rounded-2xl bg-corleone-black border border-white/5 p-4 shadow-card">
+                    <div class="overflow-hidden rounded-xl h-56 bg-zinc-800 mb-6">
